@@ -1,3 +1,11 @@
+import { 
+  Mail, 
+  Github, 
+  Linkedin, 
+  Twitter,
+  X as XIcon,
+  FileDown 
+} from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export function HeroSection() {
@@ -22,7 +30,7 @@ export function HeroSection() {
         <img
           src={settings.profileImage}
           alt="Profile"
-          className="rounded-full w-40 h-40 object-cover border-4 border-border"
+          className="rounded-full w-40 h-40 object-cover border-4 border-border shadow-lg"
           loading="lazy"
         />
       </div>
@@ -33,20 +41,76 @@ export function HeroSection() {
         <p className="text-lg text-muted-foreground mt-2">
           {settings.title} &bull; {settings.location}
         </p>
-        <div className="flex flex-wrap gap-4 mt-6">
-          {hero.ctaButtons.map((btn) => (
+
+        {/* --- Socials & CV Section --- */}
+        <div className="flex flex-wrap items-center gap-3 mt-6">
+          
+          {/* Email */}
+          {settings.email && (
             <a
-              key={btn.text}
-              href={btn.url}
-              onClick={(e) => handleCtaClick(e, btn.url)}
-              target={btn.url.startsWith("#") ? undefined : "_blank"}
-              rel={btn.url.startsWith("#") ? undefined : "noopener noreferrer"}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm border border-border rounded-md hover:bg-secondary transition-colors"
+              href={`mailto:${settings.email}`}
+              className="p-2.5 border border-border/50 rounded-lg hover:bg-secondary/80 hover:border-border transition-all text-muted-foreground hover:text-foreground"
+              aria-label="Email"
             >
-              {btn.text}
+              <Mail size={20} />
             </a>
-          ))}
+          )}
+
+          {/* GitHub */}
+          {settings.github && (
+            <a
+              href={settings.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 border border-border/50 rounded-lg hover:bg-secondary/80 hover:border-border transition-all text-muted-foreground hover:text-foreground"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+          )}
+
+          {/* LinkedIn */}
+          {settings.linkedin && (
+            <a
+              href={settings.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 border border-border/50 rounded-lg hover:bg-secondary/80 hover:border-border transition-all text-muted-foreground hover:text-foreground"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+          )}
+
+          {/* Twitter / X */}
+          {settings.twitter && (
+            <a
+              href={settings.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 border border-border/50 rounded-lg hover:bg-secondary/80 hover:border-border transition-all text-muted-foreground hover:text-foreground"
+              aria-label="Twitter"
+            >
+              <Twitter size={20} />
+            </a>
+          )}
+
+          {/* CV Download Button */}
+          {settings.resume && (
+            <a
+              href={settings.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2.5 border border-border/50 rounded-lg hover:bg-secondary/80 hover:border-border transition-all text-muted-foreground hover:text-foreground font-medium"
+            >
+              <FileDown size={20} />
+              <span>CV</span>
+            </a>
+          )}
         </div>
+        {/* --------------------------- */}
+
+       
       </div>
     </header>
   );
