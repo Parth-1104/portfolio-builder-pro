@@ -75,36 +75,36 @@ export const portfolioData = {
           description:
             "Retail analytics project exploring basket patterns, customer segments, and demand forecasting on Walmart-style transaction data.",
           tags: ["Python", "Pandas", "Data Science", "Visualization"],
-          previewUrl: "",
-          repoUrl: "https://github.com/your-username/walmart-analytics",
-          imageUrl: "/images/projects/walmart.png"
+          previewUrl: "https://wallmart-gray.vercel.app",
+          repoUrl: "",
+          imageUrl: "walmart.mov"
         },
         {
           title: "SyncUp – Real-Time Collaboration Platform",
           description:
             "Real-time collaboration app with shared workspaces, presence indicators, and low-latency sync using websockets.",
           tags: ["Next.js", "TypeScript", "WebSocket", "Redis"],
-          previewUrl: "https://your-syncup-demo.com",
-          repoUrl: "https://github.com/your-username/syncup",
-          imageUrl: "/images/projects/syncup.png"
+          previewUrl: "https://syncup-microsoft-frontend.onrender.com/",
+          repoUrl: "https://github.com/Parth-1104/SyncUp--Microsoft-Hackathon-",
+          imageUrl: "syncup.png"
         },
         {
           title: "HealthSphere – Clinical Risk Dashboard",
           description:
             "Healthcare analytics dashboard that surfaces patient risk scores, key vitals, and model-based alerts for clinicians.",
           tags: ["React", "FastAPI", "ML", "PostgreSQL"],
-          previewUrl: "https://your-healthsphere-demo.com",
-          repoUrl: "https://github.com/your-username/healthsphere",
-          imageUrl: "/images/projects/healthsphere.png"
+          previewUrl: "https://healthsphere-frontend.onrender.com",
+          repoUrl: "https://github.com/Parth-1104/HealthSphere",
+          imageUrl: "healthsphere.mov"
         },
         {
           title: "GitInspect – Repo Intelligence Toolkit",
           description:
             "Developer productivity tool that analyzes Git repositories for PR velocity, review patterns, hotspots, and contributor stats.",
           tags: ["TypeScript", "Node.js", "GitHub API"],
-          previewUrl: "",
-          repoUrl: "https://github.com/your-username/gitinspect",
-          imageUrl: "/images/projects/gitinspect.png"
+          previewUrl: "https://git-inspect.vercel.app",
+          repoUrl: "https://github.com/Parth-1104/git-inspect",
+          imageUrl: "gitinspect.mov"
         }
       ]
     },
@@ -161,7 +161,7 @@ export const portfolioData = {
         {
           title: "Microsoft Innovate – Top 10",
           description:
-            "Placed in the top 10 teams at Microsoft Innovate 2025 with a React + backend project, built by cloning and iterating on real-world app patterns from YouTube."
+            "Placed in the top 10 teams at Microsoft Innovate 2025 with a React + backend project."
         },
         {
           title: "Hackathon Finalist & Shortlists",

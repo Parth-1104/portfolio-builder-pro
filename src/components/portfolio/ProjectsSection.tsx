@@ -10,6 +10,12 @@ function ensureUrl(url: string): string {
   return url;
 }
 
+// Helper to check if the URL is a video file
+function isVideoFile(url: string) {
+  const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov'];
+  return videoExtensions.some(ext => url.toLowerCase().endsWith(ext));
+}
+
 export function ProjectsSection() {
   const { projects } = portfolioData.sections;
 
@@ -23,7 +29,7 @@ export function ProjectsSection() {
         {projects.items.map((project) => (
           <div key={project.title} className="group flex flex-col">
             
-            {/* --- NEW: Image Section --- */}
+            {/* --- Media Section (Video or Image) --- */}
             {project.imageUrl && (
               <a
                 href={ensureUrl(project.previewUrl || project.repoUrl)}
@@ -32,11 +38,22 @@ export function ProjectsSection() {
                 className="block mb-4 overflow-hidden rounded-lg border border-border/50 shadow-sm"
               >
                 <div className="relative aspect-video w-full overflow-hidden bg-secondary/30">
-                  <img
-                    src={project.imageUrl}
-                    alt={`${project.title} preview`}
-                    className="h-full w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-105"
-                  />
+                  {isVideoFile(project.imageUrl) ? (
+                    <video
+                      src={project.imageUrl}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="h-full w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-105"
+                    />
+                  ) : (
+                    <img
+                      src={project.imageUrl}
+                      alt={`${project.title} preview`}
+                      className="h-full w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-105"
+                    />
+                  )}
                 </div>
               </a>
             )}
