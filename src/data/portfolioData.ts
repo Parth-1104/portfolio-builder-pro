@@ -4,7 +4,7 @@ export const portfolioData = {
     title: "AI/ML Developer",
     location: "New Delhi, India",
     summary: "Building AI that actually works! Currently deep into Vision-Language Models and Agentic Systems, with hands-on experience taking AI projects from wild ideas to real products. Love tinkering with model fine-tuning and cloud deployments. Big open-source enthusiast - you'll find me contributing to projects that make AI more accessible to everyone.",
-    profileImage: "https://media.licdn.com/dms/image/v2/D5603AQFL2Pfu4KLD-w/profile-displayphoto-scale_400_400/B56ZfBvyX5GoAg-/0/1751302246993?e=1767225600&v=beta&t=GniNwoqOTlB2-qcKDuxc7mwxMglVRPI-PlnJQQN94C8",
+    profileImage: "https://media.licdn.com/dms/image/v2/D5603AQFL2Pfu4KLD-w/profile-displayphoto-scale_400_400/B56ZfBvyX5GoAg-/0/1751302246993?e=1771459200&v=beta&t=GZKUtn7pfTskJEWkbM62x05m-qdv3zPr0Pt_GOa8mZU",
     email: "singhparth427@gmail.com",
     github: "https://www.github.com/Parth-1104",
     linkedin: "https://www.linkedin.com/in/parth-singh427/",
