@@ -26,7 +26,7 @@ export function HeroSection() {
 
   return (
     <header className="grid md:grid-cols-3 gap-12 items-center mb-16">
-      <div className="md:col-span-1 flex justify-center">
+      <div className="md:col-span-1 flex justify-center"  id="about">
         <img
           src='linkedPFP.jpeg'
           alt="Profile"
