@@ -147,17 +147,18 @@ export const portfolioData = {
       enabled: true,
       title: "Experience",
       items: [
-        {
-          position: "AI Research Intern (Incoming)",
-          company: "Tech Innovation Lab", // Placeholder
-          period: "Summer 2025",
-          description: "Selected for research on Vision-Language Models. Will be working on optimizing inference for edge devices."
-        },
+        
         {
           position: "Full Stack Developer Intern",
-          company: "StartUp Inc", // Placeholder - Update with real data if available
-          period: "May 2024 - July 2024",
+          company: "PhilaBasket", // Placeholder - Update with real data if available
+          period: "December 2025 - May 2026",
           description: "Built and shipped the MVP for the core analytics dashboard using Next.js and Supabase. Optimized database queries reducing load times by 40%."
+        },
+        {
+          position: "Freelance Remote LLM Engineer",
+          company: "BelDock Levinin Hoffman", // Placeholder
+          period: "Summer 2025",
+          description: "Selected for build the company data specific LLM for research and assignment of cases by the Advocates previous experience in relatable cases.Reduces the time and cost of the firm for probono cases ."
         },
         {
           position: "Technical Lead",
