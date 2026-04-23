@@ -28,7 +28,7 @@ export function HeroSection() {
     <header className="grid md:grid-cols-3 gap-12 items-center mb-16">
       <div className="md:col-span-1 flex justify-center">
         <img
-          src={settings.profileImage}
+          src='linkedPFP.jpeg'
           alt="Profile"
           className="rounded-full w-40 h-40 object-cover border-4 border-border shadow-lg"
           loading="lazy"
