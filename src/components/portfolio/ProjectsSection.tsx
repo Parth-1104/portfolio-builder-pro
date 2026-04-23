@@ -138,29 +138,44 @@ export function ProjectsSection() {
               </div>
 
               {/* Card Footer */}
-              <div className="flex items-center gap-4 text-sm mt-auto pt-2">
-                {isPatentProject ? (
-                  <div className="inline-flex items-center gap-1.5 text-amber-600/90 font-medium px-2 py-1 bg-amber-500/10 rounded border border-amber-500/20">
-                    <Lock size={14} />
-                    <span>Patent Applied</span>
-                  </div>
-                ) : (
-                  <>
-                    {project.previewUrl && (
-                      <span className="inline-flex items-center gap-1.5 text-foreground font-medium hover:text-primary transition-colors">
-                        <ExternalLink size={14} />
-                        <span>Preview</span>
-                      </span>
-                    )}
-                    {project.repoUrl && (
-                      <span className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                        <Github size={14} />
-                        <span>Code</span>
-                      </span>
-                    )}
-                  </>
-                )}
-              </div>
+              {/* Card Footer */}
+<div className="flex items-center gap-4 text-sm mt-auto pt-2">
+  {isPatentProject ? (
+    <div className="inline-flex items-center gap-1.5 text-amber-600/90 font-medium px-2 py-1 bg-amber-500/10 rounded border border-amber-500/20">
+      <Lock size={14} />
+      <span>Patent Applied</span>
+    </div>
+  ) : (
+    <>
+      {project.previewUrl && (
+        <a
+          href={ensureUrl(project.previewUrl)}
+          target="_blank"
+          rel="noopener noreferrer"
+          // --- STOP PROPAGATION HERE ---
+          onClick={(e) => e.stopPropagation()} 
+          className="z-10 inline-flex items-center gap-1.5 text-foreground font-medium hover:text-primary transition-colors"
+        >
+          <ExternalLink size={14} />
+          <span>Preview</span>
+        </a>
+      )}
+      {project.repoUrl && (
+        <a
+          href={ensureUrl(project.repoUrl)}
+          target="_blank"
+          rel="noopener noreferrer"
+          // --- STOP PROPAGATION HERE ---
+          onClick={(e) => e.stopPropagation()}
+          className="z-10 inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <Github size={14} />
+          <span>Code</span>
+        </a>
+      )}
+    </>
+  )}
+</div>
             </div>
           );
         })}
