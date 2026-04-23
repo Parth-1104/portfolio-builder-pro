@@ -159,12 +159,6 @@ export const portfolioData = {
           company: "BelDock Levinin Hoffman", // Placeholder
           period: "Summer 2025",
           description: "Selected for build the company data specific LLM for research and assignment of cases by the Advocates previous experience in relatable cases.Reduces the time and cost of the firm for probono cases ."
-        },
-        {
-          position: "Technical Lead",
-          company: "Bennett University Computer Society",
-          period: "2023 - Present",
-          description: "Organizing hackathons and conducting workshops on Web Development and Machine Learning for over 200+ students."
         }
       ]
     },
